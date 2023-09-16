@@ -1,10 +1,11 @@
 function calcularCuotas() {
     // Obtener el valor del producto
     let productos = [
-        { nombre: "Televisor", precio: 1000 },
-        { nombre: "Celular", precio: 500 },
-        { nombre: "Aire acondicionado", precio: 1500 }
+        { nombre: "Televisor", precio: $('#valorProducto1').val() },
+        { nombre: "Celular", precio: $('#valorProducto2').val() },
+        { nombre: "Aire acondicionado", precio: $('#valorProducto3').val() }
     ];
+    
 
     // Agregar productos
     productos.push({ nombre: "Laptop", precio: 1200 });
