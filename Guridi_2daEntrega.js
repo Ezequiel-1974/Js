@@ -1,19 +1,22 @@
 function calcularCuotas() {
-    // Obtiener el valor del producto
+    // Obtener el valor del producto
     let productos = [
         { nombre: "Televisor", precio: 1000 },
         { nombre: "Celular", precio: 500 },
         { nombre: "Aire acondicionado", precio: 1500 }
     ];
 
-    // Agregar prductos
+    // Agregar productos
     productos.push({ nombre: "Laptop", precio: 1200 });
 
     // Definir el monto y la cantidad de cuotas
     let cuotas = 12;
 
+    // Sumar los precios de los productos
+    let totalProductos = productos.reduce((total, producto) => total + producto.precio, 0);
+
     // Calcula el valor de cada cuota
-    let valorCuota = productos / cuotas;
+    let valorCuota = totalProductos / cuotas;
 
     // Muestra al usuario el monto de sus cuotas
     alert(`El monto de sus cuotas es: ${valorCuota}`);
@@ -30,12 +33,11 @@ function calcularCuotas() {
 
     // Utilizar un ciclo para calcular el valor de cada cuota con interés
     for (let i = 0; i < productos.length; i++) {
-        let productos = productos[i].precio;
-        let cuotas = 12;
+        let producto = productos[i];
         let interes = i > 6 ? 0.1 : 0;
-        let valorCuotaConInteres = (productos / cuotas) * (1 + interes);
+        let valorCuotaConInteres = (producto.precio / cuotas) * (1 + interes);
        
         // Muestra las cuotas al usuario
-        alert(`Las cuotas para ${productos[i].nombre} son: ${valorCuotaConInteres.toFixed(2)}`);
+        alert(`Las cuotas para ${producto.nombre} son: ${valorCuotaConInteres.toFixed(2)}`);
       }
-} 
+}
