@@ -5,7 +5,7 @@ function calcularCuotas() {
         { nombre: "Celular", precio: $('#valorProducto2').val() },
         { nombre: "Aire acondicionado", precio: $('#valorProducto3').val() }
     ];
-    
+
 
     // Agregar productos
     productos.push({ nombre: "Laptop", precio: 1200 });
@@ -37,8 +37,8 @@ function calcularCuotas() {
         let producto = productos[i];
         let interes = i > 6 ? 0.1 : 0;
         let valorCuotaConInteres = (producto.precio / cuotas) * (1 + interes);
-       
+
         // Muestra las cuotas al usuario
         alert(`Las cuotas para ${producto.nombre} son: ${valorCuotaConInteres.toFixed(2)}`);
-      }
+    }
 }
