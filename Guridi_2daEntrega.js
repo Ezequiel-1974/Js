@@ -1,20 +1,27 @@
 function calcularCuotas() {
     // Obtener el valor del producto
     let productos = [
-        { nombre: "Televisor", precio: $('#valorProducto1').val() },
-        { nombre: "Celular", precio: $('#valorProducto2').val() },
-        { nombre: "Aire acondicionado", precio: $('#valorProducto3').val() }
+        { nombre: "Producto1", precio: $('#valorProducto1').val() },
+        { nombre: "Producto2", precio: $('#valorProducto2').val() },
+        { nombre: "Producto3", precio: $('#valorProducto3').val() },
     ];
 
-
     // Agregar productos
-    productos.push({ nombre: "Laptop", precio: 1200 });
+    let agregarProducto = confirm("¿Desea agregar otro producto?");
+
+    if (agregarProducto) {
+        // Agregar el nuevo producto
+        let precio = prompt("Ingrese el precio del producto:");
+        productos.push({ nombre: "Producto Agregado", precio: precio });
+    } else {
+        
+    }
+
+   // Sumar los precios de los productos
+   let totalProductos = productos.reduce((total, producto) => total + parseFloat(producto.precio), 0);
 
     // Definir el monto y la cantidad de cuotas
     let cuotas = 12;
-
-    // Sumar los precios de los productos
-    let totalProductos = productos.reduce((total, producto) => total + producto.precio, 0);
 
     // Calcula el valor de cada cuota
     let valorCuota = totalProductos / cuotas;
