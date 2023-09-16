@@ -9,14 +9,11 @@ function calcularCuotas() {
     // Agregar prductos
     productos.push({ nombre: "Laptop", precio: 1200 });
 
-    // Convertir el valor del producto a un número
-    Producto = parseFloat(Producto);
-
     // Definir el monto y la cantidad de cuotas
     let cuotas = 12;
 
     // Calcula el valor de cada cuota
-    let valorCuota = Producto / cuotas;
+    let valorCuota = productos / cuotas;
 
     // Muestra al usuario el monto de sus cuotas
     alert(`El monto de sus cuotas es: ${valorCuota}`);
@@ -38,7 +35,7 @@ function calcularCuotas() {
         let valorProducto = productos[i].precio;
         let cuotas = 12;
         let interes = i > 6 ? 0.1 : 0;
-        let valorCuotaConInteres = (valorProducto / cuotas) * (1 + interes);
+        let valorCuotaConInteres = (productos / cuotas) * (1 + interes);
        
         // Muestra las cuotas al usuario
         alert(`Las cuotas para ${productos[i].nombre} son: ${valorCuotaConInteres.toFixed(2)}`);
