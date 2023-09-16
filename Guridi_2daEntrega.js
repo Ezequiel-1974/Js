@@ -32,7 +32,7 @@ function calcularCuotas() {
 
     // Utilizar un ciclo para calcular el valor de cada cuota con interés
     for (let i = 0; i < productos.length; i++) {
-        let valorProducto = productos[i].precio;
+        let productos = productos[i].precio;
         let cuotas = 12;
         let interes = i > 6 ? 0.1 : 0;
         let valorCuotaConInteres = (productos / cuotas) * (1 + interes);
