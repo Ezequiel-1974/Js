@@ -28,8 +28,6 @@ function calcularCuotas() {
 
     console.log("------------------------")
 
-    let cuotasConInteres = "";
-
     // Utilizar un ciclo para calcular el valor de cada cuota con interés
     for (let i = 0; i < productos.length; i++) {
         let productos = productos[i].precio;
