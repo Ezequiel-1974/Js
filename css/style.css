@@ -49,8 +49,8 @@ li {
     background-color: #ff3860;
 }
 
-.is-info:hover {
-    background-color: #209cee;
+.is-success:hover {
+    background-color: #23d160;
 }
 
 /* Estilos para el total del carrito */

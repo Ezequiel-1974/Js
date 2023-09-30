@@ -16,14 +16,13 @@
             <h1 class="title">Carrito de Compra</h1>
             <ul id="cart-items"></ul>
             <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
-            <button class="button is-primary" onclick="checkout()">Pagar</button>
+            <button id="checkout-button" class="button is-primary" onclick="checkout()" disabled>Pagar</button>
             <button class="button is-danger" onclick="clearCart()">Vaciar Carrito</button>
         </div>
 
         <div class="product-container">
             <h2 class="subtitle">Productos disponibles</h2>
-            <button class="button is-info" onclick="toggleProductList()">Mostrar Productos</button>
-            <ul id="product-list" style="display: none;">
+            <ul id="product-list">
                 <li><button class="button is-success" onclick="addToCart('Producto 1', 10)">Producto 1 - $10</button></li>
                 <li><button class="button is-success" onclick="addToCart('Producto 2', 15)">Producto 2 - $15</button></li>
                 <li><button class="button is-success" onclick="addToCart('Producto 3', 20)">Producto 3 - $20</button></li>
