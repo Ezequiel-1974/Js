@@ -1,4 +1,15 @@
-let cart = [];
+// Función para obtener el carrito desde localStorage
+function getCartFromStorage() {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+}
+
+// Función para actualizar el carrito en localStorage
+function updateCartStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+let cart = getCartFromStorage();
 
 function toggleProductList() {
     $('#product-list').toggle();
@@ -12,6 +23,7 @@ function addToCart(productName, productPrice) {
         cart.push({ name: productName, price: productPrice, quantity: 1 });
     }
     updateCartDisplay();
+    updateCartStorage(); // Actualizar el carrito en localStorage
 }
 
 function updateCartDisplay() {
@@ -48,14 +60,21 @@ function checkout() {
     alert('¡Gracias por su compra!');
     cart = [];
     updateCartDisplay();
+    updateCartStorage(); // Actualizar el carrito en localStorage
 }
 
 function removeFromCart(productName) {
     cart = cart.filter(item => item.name !== productName);
     updateCartDisplay();
+    updateCartStorage(); // Actualizar el carrito en localStorage
 }
 
 function clearCart() {
     cart = [];
     updateCartDisplay();
+    updateCartStorage(); // Actualizar el carrito en localStorage
 }
+
+// Llamar a updateCartDisplay después de cargar la página para mostrar el carrito inicial
+document.addEventListener('DOMContentLoaded', updateCartDisplay);
+
