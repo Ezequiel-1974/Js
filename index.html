@@ -8,23 +8,29 @@
   <title>Carrito de Compra</title>
 </head>
 <body>
+  <!-- Aquí está la estructura principal de la página -->
   <div class="container">
+    <!-- Contenedor del carrito -->
     <div class="cart-container">
       <h1 class="title">Carrito de Compra</h1>
+      <!-- Aquí se mostrarán los elementos en el carrito -->
       <ul id="cart-items"></ul>
+      <!-- Aquí se mostrará el total de la compra -->
       <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+      <!-- Botón para pagar -->
       <button id="checkout-button" class="button is-primary" onclick="checkout()" disabled>Pagar</button>
+      <!-- Botón para vaciar el carrito -->
       <button class="button is-danger" onclick="clearCart()">Vaciar Carrito</button>
     </div>
+    <!-- Contenedor de productos disponibles -->
     <div class="product-container">
       <h2 class="subtitle">Productos disponibles</h2>
-      <ul id="product-list">
-        <li><button class="button is-success" onclick="cart.addItem('Producto 1', 10)">Producto 1 - $10</button></li>
-        <li><button class="button is-success" onclick="cart.addItem('Producto 2', 15)">Producto 2 - $15</button></li>
-        <li><button class="button is-success" onclick="cart.addItem('Producto 3', 20)">Producto 3 - $20</button></li>
-      </ul>
+      <!-- Aquí se listarán los productos disponibles -->
+      <ul id="product-list"></ul>
     </div>
   </div>
+  <!-- Incluimos nuestro script JS -->
   <script src="./js/Guridi_EntregaFinal.js"></script>
 </body>
 </html>
+
