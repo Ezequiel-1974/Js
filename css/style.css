@@ -1,8 +1,8 @@
 /* Estilos generales */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom right, #ff8c00, #ff5733);
   margin: 0;
 }
 
@@ -36,81 +36,45 @@ li {
 
 /* Estilos para los botones */
 .button {
-  font-size: 16px;
-  border-radius: 8px;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+    font-size:16px;border-radius:8px;padding:12px 24px;cursor:pointer
 }
 
 .is-primary {
-  background-color: #209cee;
-  color: #fff;
+    background-image: linear-gradient(to bottom right, #ff8c00, #ff5733);
+    color:white;transition-duration:.4s;border:none
 }
 
 .is-danger {
-  background-color: #ff3860;
-  color: #fff;
+    background-image: linear-gradient(to bottom right, #ff8c00, #ff5733);
+    color:white
 }
 
 .is-success {
-  background-color: #23d160;
-  color: #fff;
+    background-image: linear-gradient(to bottom right, #ff8c00, #ff5733);
+    color:white
 }
 
-.button:hover {
-  opacity: 0.8;
-}
+.button:hover {opacity:.8}
 
-.is-primary:hover {
-  background-color: #187bcd;
-}
+.is-primary:hover {background-color:#187bcd}
 
-.is-danger:hover {
-  background-color: #e71d36;
-}
+.is-danger:hover {background-color:#e71d36}
 
-.is-success:hover {
-  background-color: #1db954;
-}
+.is-success:hover {background-color:#1db954}
 
 /* Estilos para el total del carrito */
-.cart-total {
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
+.cart-total {font-weight:bold;margin-top:20px;margin-bottom:10px}
 
 /* Estilos para los elementos del producto */
-.product-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
+.product-item {display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #ddd}
 
-.product-item:last-child {
-  border-bottom: none;
-}
+.product-item:last-child {border-bottom:none}
 
-.product-item img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
+.product-item img {width:50px;height:50px;margin-right:10px;border-radius:50%}
 
-.product-item span {
-  flex: 1;
-}
+.product-item span {flex:1}
 
-.product-item button {
-  margin-left: 10px;
-}
+.product-item button {margin-left:10px}
 
 /* Estilos para el contenedor de productos */
-.product-container {
-  margin-top: 20px;
-  text-align: center;
-}
+.product-container {margin-top:20px;text-align:center}
